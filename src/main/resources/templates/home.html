@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Demo - Dark Theme</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo-top-left {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 133;
+            height: 35;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 120px; /* Space below the logo */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <img th:src="@{/images/sedai_logo.svg}" alt="Sedai Logo" class="logo-top-left">
+
+    <div class="content">
+        <h1 th:text="${message}">Welcome to the Dark Theme</h1>
+        <p>This is a sample Spring Boot web page with centered top text.</p>
+    </div>
+
+</body>
+</html>
